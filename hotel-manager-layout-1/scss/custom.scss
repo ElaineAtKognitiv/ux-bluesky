@@ -1,0 +1,541 @@
+// Custom.scss
+
+@import "fonts";
+
+// THEME FONT
+// Default is system fonts, alternative is traditional web
+// System fonts allows greater flexibility with font weight
+
+// $font-family-base: $font-family-sans-serif-traditional !default; 
+ $font-family-base: $font-family-sans-serif !default; 
+
+//Import of material design palette
+ @import "colors-material";
+ 
+ 
+//Import of custom variables
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "variables";
+
+// Option A: Include all of Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Include font icon
+@import "../../fonts/icons";
+
+
+ 
+
+// ----------------------------------
+// Dividers
+// ----------------------------------
+ 
+.divider {
+  border-top: 2px solid rgba($black, .12); 
+}
+
+.divider-vertical {
+  border-left: 2px solid rgba($black, .12);
+  height: 22px;
+}
+
+.divider-flush {            // Goes to the card edge
+  margin-right: -20px;
+  margin-left: -20px;
+  border-top: 1px solid rgba($black, .24); 
+}
+
+// ----------------------------------
+// Buttons
+// ----------------------------------
+
+
+// Icon with text link
+
+.icon-action {
+  font-weight: $font-weight-bold;
+  font-size: 12px;
+}
+
+a.inline-action-with-icon {
+   text-decoration: none;
+   &:hover {
+     .inline-action {
+     text-decoration: underline;
+	 }
+   }  
+}
+
+// Icon alone
+
+.icon-standalone {
+  color: rgba($black, 0.54);
+}
+
+// Secondary outline button
+
+.btn-outline-secondary {
+  color: theme-color("primary");
+  border-color: rgba($black,0.40);
+}
+
+.btn-outline-secondary.disabled {
+  border-color: rgba($black,0.20);
+  color: rgba($black,0.38);
+  opacity: 1;
+}
+
+// Secondary outline button
+
+.btn {
+  font-size: 1rem;
+  border-width: 1px;
+  min-width: 78px
+}
+
+.btn-secondary {
+  font-weight: $font-weight-semi-bold;
+  color: rgba($black,0.87);
+  background-color: rgba($black, 0.08);
+  border-color: rgba($black, 0.01);
+  border-width: 1px;
+  &:hover {
+    color: $black;
+	background-color: rgba($black, 0.1);
+	border-color: rgba($black, 0.01);
+  }
+  &.disabled {
+    opacity: 1;
+    color: rgba($black, 0.38);
+	background-color: rgba($black, 0.04);
+	border-color: rgba($black, 0.01); 
+  } 
+}
+
+
+.btn-sm {
+  font-weight: $font-weight-semi-bold;
+  font-size: 0.875rem;
+}
+
+.btn:not([disabled]):not(.disabled):active {
+  box-shadow: none;
+}
+
+
+// ----------------------------------
+// Forms
+// ----------------------------------
+
+label.col-form-label, legend.col-form-label {
+  font-weight: $font-weight-semi-bold;
+  color: rgba(0,0,0,.7);
+}
+
+.col-form-label {
+  line-height: 20px;     // override bootstrap
+  padding-bottom: 12px;  // override bootstrap
+}
+
+.form-group {
+  margin-bottom: 20px;  //override bootstrap 12px
+}
+
+.form-control:hover {
+  border-color: rgba(0,0,0,0.32);
+}
+
+.form-control:focus {
+  border-color: $palette-primary;
+  border-width: 2px;
+}
+
+input, textarea {
+  caret-color: $palette-primary;
+}
+
+
+
+.input-required {
+  display: inline-block;
+  padding-left: 8px;
+}
+
+.custom-control-input {
+  &:disabled {
+    ~ .custom-control-label {
+      
+      &::before {
+        border-color: rgba(0,0,0,.20);
+      }
+    }
+  }
+
+}
+  
+.custom-checkbox {
+  .custom-control-label::before {
+    border: 2px solid rgba(0,0,0,.38);
+  }
+  .custom-control-input:checked ~ .custom-control-label {
+    &::before {
+      border: theme-color("primary");
+    }
+  }
+  @extend .mb-0; 
+}
+
+.custom-radio {
+  .custom-control-label::before {
+    border: 2px solid rgba(0,0,0,.38);
+  }
+  .custom-control-input:checked ~ .custom-control-label {
+    &::before {
+      border-color: theme-color("primary");
+	  background-color: transparent;
+    }
+  }
+  @extend .mb-0;   
+}
+
+
+
+.additionalInfo {
+  display: none;
+}
+
+.input-group-preprend {
+  border-right-color: transparent;
+}
+
+.input-group-sm {
+  font-size: $font-size-base;
+}
+
+.form-control.is-invalid {
+  border-width: 2px;
+}
+
+.form-control.is-warning {
+  border-width: 2px;
+  border-color: $palette-ui-yellow;
+}
+
+.invalid-feedback {
+  font-size: $font-size-sm;
+}
+
+.warning-feedback {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semi-bold;
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+
+// forms helper text
+
+.input-helper-text {
+  color: $secondary;
+  font-size: $font-size-sm;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 12px;
+}
+
+.label-helper-icon {
+  color: rgba(0,0,0,0.54);
+  padding-left: 8px;
+  .material-icons {
+    vertical-align: text-bottom;
+  }
+}
+
+
+//disabled input
+
+.form-control.disabled {
+  border-color: rgba(0,0,0,0.1);
+  color: rgba(0,0,0,0.38);
+  background-color: #fafafa;
+//  @include box-shadow(inset 1px 1px 3px 0px rgba(0,0,0,0.075));
+}
+
+// ----------------------------------
+// Cards
+// ----------------------------------
+
+.m-card {
+   @include box-shadow($card-box-shadow);
+}
+
+
+// ----------------------------------
+// Typography
+// ----------------------------------
+
+// Page title
+
+.h2 {
+//  font-weight: $font-weight-semi-bold;
+//  font-size: 1.5rem;
+  font-weight: 400;
+  font-size: 34px;
+  color: $palette-header-1;  
+}
+
+// Section title
+
+.h5 {
+  font-weight: $font-weight-semi-bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: $palette-header-2;
+  margin-bottom: 16px;  
+}
+
+// List title
+
+.list-title {
+  font-weight: $font-weight-semi-bold;
+//  font-size: 1rem;
+}
+
+
+.text-ui-accent-1 {
+  color: $palette-kpi-1;
+}
+
+.text-ui-accent-2 {
+  color: $palette-kpi-2;
+}
+
+.text-ui-accent-3 {
+  color: $palette-kpi-3;
+}
+
+.text-ui-accent-4 {
+  color: $palette-kpi-4;
+}
+
+
+
+
+
+
+
+
+// ----------------------------------
+// Top Navigation
+// ----------------------------------
+
+.shape-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgba(0,0,0,0.15);
+}
+
+a {
+  .icon-nav {
+    color: rgba(255,255,255,0.7);
+  }
+  &:hover .icon-nav {
+    color:#fff;
+  }
+}
+
+.m-navbar {
+  background-color: $palette-app-header;
+  z-index: 1040;
+//  @include box-shadow(0 .3rem .5rem rgba($black, .175) );    dark header
+  @include box-shadow(0 .3rem .5rem rgba($black, .08) );  
+  a.nav-link {
+    color: $palette-app-header-text;
+	font-weight: $header-font-weight;
+	text-transform: uppercase;
+	i {
+	  color: rgba(0,0,0,0.6);
+	}
+  }
+  
+  
+  .nav-link:hover {
+  background-color: transparent;
+  border-bottom: 0;
+  }
+}
+
+// Brand name
+
+.m-brand {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: $palette-app-brand-text;
+  &:hover {
+    color: $palette-app-brand-text;
+  }
+  margin-left: 8px;
+
+}
+
+
+// ----------------------------------
+// Tables
+// ----------------------------------
+
+.table.view-datagrid {
+  th {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semi-bold;
+    color: rgba(0,0,0,.7);
+  }
+  thead th {
+    border-bottom-width: 1px;
+	padding-bottom: 8px;
+  }
+  .check-all {
+    padding-bottom: 0;  
+  }
+}
+
+
+// ----------------------------------
+// Content Table
+// ----------------------------------
+
+.table-content-view {
+  font-size: $font-size-base;
+}
+
+.ct-header {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semi-bold;
+  color: rgba(0,0,0,.7);
+}
+
+.ct-label {
+  font-weight: $font-weight-semi-bold;
+  color: rgba(0,0,0,.7);
+}
+
+.ct-display-4 {
+  font-size: 3rem;
+  margin-top: -12px;
+  font-weight: $font-weight-normal;
+//  letter-spacing: -1px;
+}
+
+.ct-label-status {
+  font-weight: $font-weight-semi-bold;
+}
+
+
+// ----------------------------------
+// Tabs
+// ----------------------------------
+
+.m-tab-content {
+  border-left: 1px solid rgba($black, .12);
+  border-right: 1px solid rgba($black, .12);
+  border-bottom: 1px solid rgba($black, .12);
+  border-top: 3px solid transparent;
+  @extend .pb-2;
+  @extend .px-2;
+}
+
+.nav-tabs .nav-link.active {
+  border-top: 3px solid theme-color("primary");
+  border-bottom: 1px solid transparent;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  font-weight: $font-weight-semi-bold;  
+}
+
+.nav-tabs .nav-link:hover {
+  background-color: rgba($black, 0.08);
+  border-color: transparent;
+}
+
+.nav-tabs {
+  a.nav-link {
+    color: rgba($black, 0.87);
+	font-weight: $font-weight-semi-bold;
+  }
+}
+
+
+
+// ----------------------------------
+// Expand/Collapse
+// ----------------------------------
+
+.dropdown-toggle-up {
+    @include caret(up);
+}
+
+
+.btn-expand.collapsed {
+ & .dropdown-toggle {
+  display: inline;
+ }
+ & .dropdown-toggle-up {
+  display: none;
+ }
+}
+
+.btn-expand:not(.collapsed) {
+ & .dropdown-toggle {
+  display: none;
+ }
+ & .dropdown-toggle-up {
+  display: inline;
+ }
+}
+
+// ----------------------------------
+// Alerts
+// ----------------------------------
+
+.alert-success {
+  background-color: $palette-bg-green;
+  border-color: $palette-bg-green;
+  color: $body-color;
+}
+
+.alert-danger {
+  background-color: $palette-bg-red;
+  border-color: $palette-bg-red;
+  color: $body-color;
+}
+
+.alert-warning {
+  background-color: $palette-bg-yellow;
+  border-color: $palette-bg-yellow;
+  color: $body-color;  
+}
+
+.alert-info {
+  background-color: $palette-bg-blue;
+  border-color: $palette-bg-blue;
+  color: $body-color;  
+}
+
+
+
+
+
+// ----------------------------------
+// Fix
+// ----------------------------------
+
+.dropdown-menu { // shows nav dropdowns in front of sticky button nav
+  z-index: 1050;
+}
+
+@include media-breakpoint-down(md) {
+  .container {
+    width: 100%;
+    max-width: none;
+  }
+}

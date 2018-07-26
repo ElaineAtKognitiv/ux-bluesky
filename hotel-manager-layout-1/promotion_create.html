@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Promotions Management</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="dist/css/custom-theme.min.css">
+    <link rel="stylesheet" href="dist/css/custom-theme.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+  </head>
+  <body>
+	  <nav class="navbar navbar-expand-lg m-navbar">
+			  <button class="navbar-toggler align-self-start mr-2 mt-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+	  <div class="d-flex flex-column">
+			  <a class="navbar-brand m-brand align-self-start mb-2" href="#">Kognitiv_  Property Name</a>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-auto">
+				  <li class="nav-item mr-4">
+					<a class="nav-link" href="#">Dashboard<span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item dropdown mr-4">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Rates
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">Day Rates</a>
+					  <a class="dropdown-item" href="#">Packages</a>
+					  <a class="dropdown-item" href="#">Services</a>
+					  <a class="dropdown-item" href="promotion_management.html">Promotions</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="#">Child Pricing</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="#">Pricing Simulator</a>
+					</div>
+				  </li>
+				  <li class="nav-item mr-4">
+					<a class="nav-link" href="#">Availability</a>
+				  </li>
+				  <li class="nav-item dropdown mr-4">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Guests
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">Bookings</a>
+					  <a class="dropdown-item" href="#">Price Drop Alerts</a>
+					  <a class="dropdown-item" href="#">Reviews</a>
+					  <a class="dropdown-item" href="#">Email</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown mr-4">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Marketing
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">Channels</a>
+					  <a class="dropdown-item" href="#">Meta</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="#">Booking Engine Banners</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Insight
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">Subscriptions</a>
+					  <a class="dropdown-item" href="#">Bookability Calendar</a>
+					  <a class="dropdown-item" href="#">Revenue</a>
+					  <a class="dropdown-item" href="#">Lodging</a>
+					  <a class="dropdown-item" href="#">Guests</a>
+					</div>
+				  </li>	
+				</ul>
+			</div>
+		</div>
+
+			  <div class="ml-auto align-self-start mt-1">
+				<ul class="navbar-nav flex-row">
+				  <div class="d-none d-lg-flex flex-row">
+					  <li class="nav-item mr-3 mr-lg-2">
+						<a class="nav-link" href="#"><i class="material-icons">search</i></a>
+					  </li>
+					  <li class="nav-item mr-3 mr-lg-2">
+						<a class="nav-link" href="#"><i class="material-icons">settings</i></a>
+					  </li>
+					  <li class="nav-item mr-3 mr-lg-2">
+						<a class="nav-link" href="#"><i class="material-icons">help</i></a>
+					  </li>
+				  </div>
+				  <li class="nav-item ml-2 mb-1">
+					<div class="shape-circle d-flex justify-content-center">
+					<a class="nav-link" href="#"><i class="material-icons">person</i></a>
+					</div>
+				  </li>
+				</ul>
+			  </div>
+		  </div>
+
+		</div>
+	  </nav>
+
+	  <div class="container px-0">
+		<div class="card m-card my-0 my-lg-3">	
+		  <div class="card-body pt-0">
+			<div class="sticky-top bg-white py-3">
+				<div class="d-flex mb-1">
+					<div class="h2">Create a Promotion</div>
+					<div class="ml-auto">
+					<button type="button" class="btn btn-outline-secondary mr-1" onclick="window.location.href='promotion_management.html'">Cancel</button>
+					<button type="button" class="btn btn-primary mr-1" onclick="window.location.href='promotion_create-error.html'">Save</button>
+					</div>
+				</div>
+				<div class="divider divider-flush my-2"></div>
+			</div>  
+
+
+			<form>
+			  <div class="form-group row">
+				<label for="inputEmail3" class="col-md-3 col-lg-2 col-form-label">Name<div class="input-required">*</div></label>
+				<div class="col-md-9 col-lg-7">
+				  <input type="email" class="form-control" id="inputEmail3" placeholder="Promotion Name">
+				  <div class="input-helper-text">
+					64 characters left
+				  </div>
+				</div>
+			  </div>
+			  <div class="form-group row">
+				<label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Internal ID</label>
+				<div class="col-6 col-md-4 col-lg-3">
+				  <input type="password" class="form-control" id="inputPassword3" placeholder="PROMOTION_NAME">
+				</div>
+			  </div>
+			<div class="divider mb-3"></div>
+			<div class="h5">Offers</div>
+			  <div class="form-group row">
+				<label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Discount<a class="label-helper-icon" href="#"><i class="material-icons md-16">help</i></a></label>
+				<div class="col-6 mt-2">
+					<div class="mb-1">This promotion has no discounts</div>
+					<a href="#" class="inline-action-with-icon" id="AddDiscountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<div class="d-flex flex-row align-items-center">
+							<div class="bm-icon-sign-plus icon-action mr-1"></div>
+							<div class="inline-action">Add Discount</div>
+						</div>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="AddDiscountDropdown">
+					  <a class="dropdown-item" href="#">Standard Discount (Crossout Rate)</a>
+					  <a class="dropdown-item" href="#">Early Bird</a>
+					  <a class="dropdown-item" href="#">Last Minute</a>
+					  <a class="dropdown-item" href="#">Length of Stay</a>
+					</div>
+				</div>
+			  </div>
+			  <div class="form-group row">
+				<legend class="col-form-label col-md-3 col-lg-2 pt-0">Free Items</legend>
+				<div class="col-md-9 col-lg-10">
+					<div class="custom-control custom-checkbox">
+					  <input type="checkbox" class="custom-control-input" id="customCheck1">
+					  <label class="custom-control-label" for="customCheck1">Free Child</label>
+					</div>
+					<div class="customCheck1 additionalInfo">
+						<div class="form-row d-flex flex-column flex-md-row ml-5">
+							<div class="form-group mr-md-4">
+							  <label for="inputCity">Maximum Number</label>
+							  <div class="row">
+								<div class="col-md-8">
+								  <select id="inputState" class="form-control">
+									<option selected>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option>
+									</select>
+								 </div>
+							  </div>
+							</div>
+							<div class="form-group mr-md-4">
+							  <label for="inputCity">Minimum Age</label>
+							  <div class="row">
+								<div class="col-md-10">
+								  <select id="inputState" class="form-control">
+									<option selected>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+									<option>13</option>
+									<option>14</option>
+									<option>15</option>
+									<option>16</option>
+									<option>17</option>
+									<option>18</option>
+									</select>
+								 </div>
+							  </div>
+							</div>
+							<div class="form-group">
+							  <label for="inputZip">Maximum Age</label>
+							  <div class="row">
+								<div class="col-md-10">
+								  <select id="inputState" class="form-control">
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option>
+									<option>11</option>
+									<option selected>12</option>
+									<option>13</option>
+									<option>14</option>
+									<option>15</option>
+									<option>16</option>
+									<option>17</option>
+									<option>18</option>
+									</select>
+								 </div>
+							  </div>
+							</div>
+							<div class="form-group col-md-12 mb-4">		
+								<a href="#" class="inline-action-with-icon">
+									<div class="d-flex flex-row align-items-center">
+										<div class="bm-icon-sign-plus icon-action mr-1"></div>
+										<div class="inline-action">Add Child Condition</div>
+									</div>
+								</a>
+							</div>			
+						</div>
+					</div>
+				</div>
+			 
+				<div class="offset-md-3 offset-lg-2 col-md-9 col-lg-10">
+					<div class="custom-control custom-checkbox">
+					  <input type="checkbox" class="custom-control-input" id="customCheck2">
+					  <label class="custom-control-label" for="customCheck2">Free Night</label>
+					</div>
+					<div class="ml-5 additionalInfo customCheck2">
+					  <div class="form-row d-flex flex-column flex-md-row">
+						<div class="form-group mr-md-4">
+						  <label for="inputCity">Paid Nights</label>
+						  <div class="row">
+							<div class="col-md-12">
+							  <select id="inputState" class="form-control">
+								<option>1</option>
+								<option selected>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+								<option>9</option>
+								<option>10</option>
+								</select>
+							 </div>
+						  </div>
+						</div>
+						<div class="form-group">
+						  <label for="inputCity">Free Nights</label>
+						  <div class="row">
+							<div class="col-md-12">
+							  <select id="inputState" class="form-control">
+								<option>0</option>
+								<option selected>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+								<option>9</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+								<option>13</option>
+								<option>14</option>
+								<option>15</option>
+								<option>16</option>
+								<option>17</option>
+								<option>18</option>
+								</select>
+							 </div>
+						  </div>
+						</div>				
+					  </div>
+					  <div class="custom-control custom-checkbox">
+						  <input type="checkbox" class="custom-control-input" id="customCheck3">
+						  <label class="custom-control-label" for="customCheck3">Apply only once in a length of stay</label>
+					  </div>
+
+					</div>
+				  </div>
+				</div>
+				<div class="divider mb-3"></div>
+				<div class="h5">Length of Stay</div>
+				<fieldset class="form-group">
+					<div class="row">
+					  <legend class="col-form-label col-md-3 col-lg-2 pt-0">Minimum LOS</legend>
+					  <div class="col-md-9 col-lg-10">
+						<div class="custom-control custom-radio">
+						  <input type="radio" id="customRadio1-1" name="customRadio1" class="custom-control-input" checked>
+						  <label class="custom-control-label" for="customRadio1-1">Inherit from rate</label>
+						</div>
+						<div class="custom-control custom-radio">
+						  <input type="radio" id="customRadio1-2" name="customRadio1" class="custom-control-input" disabled>
+						  <label class="custom-control-label" for="customRadio1-2">Same as length of stay offer</label>
+						</div>
+						<div class="custom-control custom-radio">
+						  <input type="radio" id="customRadio1-3" name="customRadio1" class="custom-control-input">
+						  <label class="custom-control-label" for="customRadio1-3">Longer MinLOS than rate</label>
+						</div>
+					  </div>
+					</div>
+				  </fieldset>
+				  <a class="btn btn-link btn-expand collapsed px-0 py-0 mb-3" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+					<span class="closed dropdown-toggle">More</span><span class="open dropdown-toggle-up">Less<span>
+				  </a>
+<!------------- Begin LOS collapse ---------------->				  
+				  <div class="collapse mb-4" id="collapseExample1">
+					<fieldset class="form-group">
+						<div class="row">
+						  <legend class="col-form-label col-md-3 col-lg-2 pt-0">Maximum LOS</legend>
+						  <div class="col-md-9 col-lg-10">
+							<div class="custom-control custom-radio">
+							  <input type="radio" id="customRadio6-1" name="customRadio6" class="custom-control-input" checked>
+							  <label class="custom-control-label" for="customRadio6-1">Inherit from rate</label>
+							</div>
+							<div class="custom-control custom-radio">
+							  <input type="radio" id="customRadio6-2" name="customRadio6" class="custom-control-input">
+							  <label class="custom-control-label" for="customRadio6-2">Shorter MaxLOS than Rate</label>
+							</div>
+							<div class="d-flex flex-row ml-5">
+								<div class="col-md-2">
+								  <select id="inputState" class="form-control">
+								    <option>Select...</option>
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+									<option>13</option>
+									<option>14</option>
+									<option>15</option>
+									<option>16</option>
+									<option>17</option>
+									<option>18</option>
+									</select>
+								 </div>
+								 <div class="align-self-center">days in total</div>
+							</div>
+						  </div>
+						</div>
+					  </fieldset>
+					<fieldset class="form-group">
+						<div class="row">
+						  <legend class="col-form-label col-md-3 col-lg-2 pt-0">Dynamic MinLOS Mode</legend>
+						  <div class="col-md-9 col-lg-10">
+							<div class="custom-control custom-radio">
+							  <input type="radio" id="customRadio7-1" name="customRadio7" class="custom-control-input" checked>
+							  <label class="custom-control-label" for="customRadio7-1">Inherit from rate</label>
+							</div>
+						  </div>
+						</div>
+					  </fieldset>
+					<fieldset class="form-group">
+						<div class="row">
+						  <legend class="col-form-label col-md-3 col-lg-2 pt-0">Dynamic MinLOS</legend>
+						  <div class="col-md-9 col-lg-10">
+							<div class="custom-control custom-radio">
+							  <input type="radio" id="customRadio8-1" name="customRadio8" class="custom-control-input" checked>
+							  <label class="custom-control-label" for="customRadio8-1">Inherit from rate</label>
+							</div>
+							<div class="custom-control custom-radio">
+							  <input type="radio" id="customRadio8-2" name="customRadio8" class="custom-control-input">
+							  <label class="custom-control-label" for="customRadio8-2">Longer Dynamic MinLOS than Rate</label>
+							</div>
+							<div class="d-flex flex-row ml-5">
+								<div class="col-md-2">
+								  <select id="inputState" class="form-control">
+								    <option>Select...</option>
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+									<option>13</option>
+									<option>14</option>
+									<option>15</option>
+									<option>16</option>
+									<option>17</option>
+									<option>18</option>
+									</select>
+								 </div>
+								 <div class="align-self-center">days in total</div>
+							</div>
+						  </div>
+						</div>
+					  </fieldset>
+				  </div>
+<!------------- End LOS collapse ---------------->		
+				  <div class="divider mb-3"></div>
+				  <div class="h5">Travel Window</div>
+				  <div class="form-group row">
+					<label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Stay Dates</label>
+					<div class="col-md-6 col-lg-4">
+					    <select id="inputState" class="form-control">
+								<option selected>All dates, no restriction</option>
+								<option>Custom dates</option>
+								<option>Blackout dates</option>
+						</select>
+					</div>
+				  </div>
+				  <fieldset class="form-group">
+					<div class="row">
+					  <legend class="col-form-label col-md-3 col-lg-2 pt-0">Days of the Week</legend>
+					  <div class="col-md-9 col-lg-10">
+
+						<div class="custom-control custom-radio">
+						  <input type="radio" id="customRadio2-1" name="customRadio2" class="custom-control-input" value="option1" checked>
+						  <label class="custom-control-label" for="customRadio2-1">All</label>
+						</div>
+						<div class="custom-control custom-radio">
+						  <input type="radio" id="customRadio2-2" name="customRadio2" class="custom-control-input" value="option2">
+						  <label class="custom-control-label" for="customRadio2-2">Only these days</label>
+						</div>
+						
+						<div class="ml-5 additionalInfo customRadio2-2">
+							<div class="custom-control custom-checkbox custom-control-inline">
+							  <input type="checkbox" class="custom-control-input" id="customCheck4">
+							  <label class="custom-control-label" for="customCheck4">Sunday</label>
+							</div>
+							<div class="custom-control custom-checkbox custom-control-inline">
+							  <input type="checkbox" class="custom-control-input" id="customCheck5">
+							  <label class="custom-control-label" for="customCheck5">Monday</label>
+							</div>
+							<div class="custom-control custom-checkbox custom-control-inline">
+							  <input type="checkbox" class="custom-control-input" id="customCheck6">
+							  <label class="custom-control-label" for="customCheck6">Tuesday</label>
+							</div>
+							<div class="custom-control custom-checkbox custom-control-inline">
+							  <input type="checkbox" class="custom-control-input" id="customCheck7">
+							  <label class="custom-control-label" for="customCheck7">Wednesday</label>
+							</div>
+							<div class="custom-control custom-checkbox custom-control-inline">
+							  <input type="checkbox" class="custom-control-input" id="customCheck8">
+							  <label class="custom-control-label" for="customCheck8">Thursday</label>
+							</div>
+							<div class="custom-control custom-checkbox custom-control-inline">
+							  <input type="checkbox" class="custom-control-input" id="customCheck9">
+							  <label class="custom-control-label" for="customCheck9">Friday</label>
+							</div>
+							<div class="custom-control custom-checkbox custom-control-inline">
+							  <input type="checkbox" class="custom-control-input" id="customCheck10">
+							  <label class="custom-control-label" for="customCheck10">Saturday</label>
+							</div>
+						</div>
+
+					</div>
+				  </fieldset>
+				  <div class="divider mb-3"></div>
+				  <div class="h5">Booking</div>
+				  <div class="form-group row">
+					<label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Booking Dates</label>
+					<div class="col-md-6 col-lg-4"">
+					    <select id="inputState" class="form-control">
+								<option selected>All dates, no restriction</option>
+								<option>Custom dates</option>
+								<option>Blackout dates</option>
+						</select>
+					</div>
+				  </div>
+				  <div class="form-group row">
+					<label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Cancellation Policy</label>
+					<div class="col-md-6 col-lg-4"">
+					    <select id="inputState" class="form-control">
+								<option selected>Inherit from rate</option>
+						</select>
+					</div>
+				  </div>
+				  <div class="form-group row">
+					<label for="inputPassword3" class="col-md-3 col-lg-2 col-form-label">Booking Guarantee</label>
+					<div class="col-md-6 col-lg-4"">
+					    <select id="inputState" class="form-control">
+								<option selected>Inherit from rate</option>
+						</select>
+					</div>
+				  </div>
+				<fieldset class="form-group">
+					<div class="row">
+					  <legend class="col-form-label col-md-3 col-lg-2 pt-0">Partial Applications</legend>
+					  <div class="col-md-9 col-lg-7">
+						<div class="custom-control custom-radio">
+						  <input type="radio" id="customRadio3-2" name="customRadio3" class="custom-control-input" checked>
+						  <label class="custom-control-label" for="customRadio3-2">Entire stay must qualify for the promotion</label>
+						</div>
+						<div class="custom-control custom-radio">
+						  <input type="radio" id="customRadio3-1" name="customRadio3" class="custom-control-input">
+						  <label class="custom-control-label" for="customRadio3-1">Allow partial promotion to be applied when entire stay does not qualify for promotion. Where applicable, more than one promotion will be applied per stay.</label>
+						</div>
+					  </div>
+					</div>
+				  </fieldset>
+				  <a class="btn btn-link btn-expand collapsed px-0 py-0 mb-3" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+					<span class="closed dropdown-toggle">More</span><span class="open dropdown-toggle-up">Less<span>
+				  </a>
+				  <div class="collapse mb-4" id="collapseExample2">
+					Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+				  </div>
+				<div class="divider mb-3"></div>
+				<div class="h5">Marketing</div>
+				  <fieldset disabled>
+				  <div class="form-group row">
+					<label for="inputEmail3" class="col-md-3 col-lg-2 col-form-label">Promotion Codes</label>
+					<div class="col-md-6 col-lg-4">
+					  <input type="email" class="form-control disabled" id="disabledInput" placeholder="This has been disabled">
+					</div>
+				  </div>
+				  </fieldset>
+				  <fieldset class="form-group">
+					<div class="row">
+					  <legend class="col-form-label col-md-3 col-lg-2 pt-0">Channels</legend>
+					  <div class="col-md-9 col-lg-10">
+						<div class="custom-control custom-radio">
+						  <input type="radio" id="customRadio4-1" name="customRadio4" class="custom-control-input" checked>
+						  <label class="custom-control-label" for="customRadio4-1">All</label>
+						</div>
+						<div class="custom-control custom-radio">
+						  <input type="radio" id="customRadio4-2" name="customRadio4" class="custom-control-input">
+						  <label class="custom-control-label" for="customRadio4-2">Only these channels</label>		
+						</div>
+						<div class="form-group col-md-12 additionalInfo customRadio4-2">		
+							<a href="#" class="inline-action-with-icon">
+								<div class="d-flex flex-row align-items-center">
+								<div class="bm-icon-sign-plus icon-action mr-1"></div>
+								<div class="inline-action">Add Channel</div>
+								</div>
+							</a>
+						</div>
+					  </div>
+					</div>
+				  </fieldset>
+				  <fieldset class="form-group">
+					<div class="row">
+					  <legend class="col-form-label col-md-3 col-lg-2 pt-0">Geo Targeting</legend>
+					  <div class="col-md-9 col-lg-10">
+						<div class="custom-control custom-radio">
+						  <input type="radio" id="customRadio5-1" name="customRadio5" class="custom-control-input" checked>
+						  <label class="custom-control-label" for="customRadio5-1">All countries</label>
+						</div>
+						<div class="custom-control custom-radio">
+						  <input type="radio" id="customRadio5-2" name="customRadio5" class="custom-control-input">
+						  <label class="custom-control-label" for="customRadio5-2">All countries, with these exceptions</label>
+						</div>
+						<div class="custom-control custom-radio">
+						  <input type="radio" id="customRadio5-3" name="customRadio5" class="custom-control-input">
+						  <label class="custom-control-label" for="customRadio5-3">Custom countries</label>
+						</div>
+					  </div>
+					</div>
+				   </fieldset>	
+				  <div class="form-group row">
+					<legend class="col-form-label col-md-3 col-lg-2 pt-0">Device Type</legend>
+					<div class="col-md-9 col-lg-10">
+						<div class="custom-control custom-checkbox">
+							  <input type="checkbox" class="custom-control-input" id="customCheck11">
+							  <label class="custom-control-label" for="customCheck11">Desktop</label>
+						</div>
+						<div class="custom-control custom-checkbox">
+							  <input type="checkbox" class="custom-control-input" id="customCheck12">
+							  <label class="custom-control-label" for="customCheck12">Mobile</label>
+						</div>
+					</div>
+				  </div>
+				  <div class="divider mb-3"></div>
+				  <div class="h5">Rates</div>
+				  <div class="form-group row">
+					<legend class="col-form-label col-md-3 col-lg-2 pt-0">Rate Plans</legend>
+					<div class="col-md-9 col-lg-10">
+						<div class="btn-toolbar align-items-center my-2" role="toolbar" aria-label="Toolbar with button groups">
+							<button type="button" class="btn btn-outline-secondary btn-sm">Add Rate Plan</button>
+							<div class="divider-vertical mx-2"></div>
+							<button type="button" class="btn btn-outline-secondary btn-sm mr-1 disabled">Override Offer</button>
+							<button type="button" class="btn btn-outline-secondary btn-sm disabled ">Delete</button>
+						</div>
+						<table class="table table-sm table-striped view-datagrid">
+						  <thead>
+							<tr>
+							  <th scope="col" class="check-all">
+								<div class="custom-control custom-checkbox">
+									  <input type="checkbox" class="custom-control-input" id="customCheck13">
+									  							  <label class="custom-control-label" for="customCheck13"></label>
+								</div>
+							  </th>
+							  <th scope="col">Room Type</th>
+							  <th scope="col">Rate Name</th>
+							  <th scope="col">Other Promotions</th>
+							  <th scope="col">Offer</th>
+							</tr>
+						  </thead>
+						  <tbody>
+<!--							<tr>
+							  <th scope="row" colspan="5">
+								<div class="form-check">
+						  		</div>
+								</th>
+							  
+							</tr>
+							<tr>
+							  <th scope="row">
+								<div class="form-check">
+						  		</div>
+							  </th>
+							  <td>&nbsp;</td>
+							  <td></td>
+							  <td></td>
+							  <td></td>
+							</tr>
+							<tr>
+							  <th scope="row">
+								<div class="form-check">
+						  		</div>
+							  </th>
+							  <td>&nbsp;</td>
+							  <td></td>
+							  <td></td>
+							  <td></td>
+							</tr>  -->
+						  </tbody>
+						</table>
+						<div>This promotion does not contain any rate plans</div>
+						<div class="mt-2 mb-5">
+							<a href="#" class="inline-action-with-icon">
+								<div class="d-flex flex-row align-items-center">
+									<div class="bm-icon-sign-plus icon-action mr-1"></div>
+									<div class="inline-action">Add rate plan</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				  </div>				  
+
+
+
+
+			</form>
+		  </div>
+		</div> <!-- card end -->
+	  </div> <!-- container end -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+    $('input[type="checkbox"]').click(function(){
+        var inputValue = $(this).attr("ID");
+//        $("." + inputValue).toggle();
+		 $("." + inputValue).show();
+    });
+
+	
+
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('input[type="radio"]').click(function(){
+        var inputValue = $(this).attr("ID");
+        var targetBox = $("." + inputValue);
+        $(targetBox).show();
+    });
+});
+</script>
+
+	
+	
+
+
+	
+  </body>
+</html>

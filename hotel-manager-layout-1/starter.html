@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Promotions Management</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="dist/css/custom-theme.min.css">
+
+  </head>
+  <body>
+	  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+			  <button class="navbar-toggler align-self-start" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+	  <div class="d-flex flex-column">
+			  <a class="navbar-brand align-self-start" href="#">Kognitiv - Property Name</a>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-auto">
+				  <li class="nav-item active">
+					<a class="nav-link" href="#">Dashboard<span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Rates
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">Day Rates</a>
+					  <a class="dropdown-item" href="#">Packages</a>
+					  <a class="dropdown-item" href="#">Services</a>
+					  <a class="dropdown-item" href="#">Promotions</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="#">Child Pricing</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="#">Pricing Simulator</a>
+					</div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#">Availability</a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Guests
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">Bookings</a>
+					  <a class="dropdown-item" href="#">Price Drop Alerts</a>
+					  <a class="dropdown-item" href="#">Reviews</a>
+					  <a class="dropdown-item" href="#">Email</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Marketing
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">Channels</a>
+					  <a class="dropdown-item" href="#">Meta</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="#">Booking Engine Banners</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Insight
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">Subscriptions</a>
+					  <a class="dropdown-item" href="#">Bookability Calendar</a>
+					  <a class="dropdown-item" href="#">Revenue</a>
+					  <a class="dropdown-item" href="#">Lodging</a>
+					  <a class="dropdown-item" href="#">Guests</a>
+					</div>
+				  </li>	
+				</ul>
+			</div>
+		</div>
+
+			  <div class="ml-auto align-self-start">
+				<ul class="navbar-nav flex-row">
+				  <li class="nav-item">
+					<a class="nav-link" href="#">Search</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#">Settings</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#">Help</a>
+				  </li>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#">My Account</a>
+				  </li>
+				</ul>
+			  </div>
+		  </div>
+
+		</div>
+		  
+
+	  </nav>
+
+	  <div class="container">
+		<div class="card">
+		  <div class="card-body">
+			<h3>Promotions</h3>
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+			  <li class="nav-item">
+				<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Active Promotions</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" id="rates-tab" data-toggle="tab" href="#rates" role="tab" aria-controls="rates" aria-selected="false">Rates with Promotions</a>
+			  </li>
+			  <li class="nav-item">
+				 <a class="nav-link" id="promotions-tab" data-toggle="tab" href="#promotions" role="tab" aria-controls="promotions" aria-selected="false">All Promotions</a>
+			  </li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+			  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="nav-home-tab">
+				<div class="btn-toolbar my-2" role="toolbar" aria-label="Toolbar with button groups">
+					<button type="button" class="btn btn-secondary mr-2">Create Promotion</button>
+					<div class="border border-right border-secondary mr-2"></div>
+					<button type="button" class="btn btn-outline-secondary mr-1">Enable</button>
+					<button type="button" class="btn btn-outline-secondary mr-1">Disable</button>
+					<button type="button" class="btn btn-outline-secondary">Delete</button>
+					<div class="d-flex flex-row ml-auto">
+						<div class="input-group mr-1">
+							<div class="input-group-prepend">
+							  <div class="input-group-text" id="btnGroupAddon2">@</div>
+							</div>
+							<input type="text" class="form-control" placeholder="Search" aria-label="Input group example" aria-describedby="btnGroupAddon2">
+						</div>
+						<button type="button" class="btn btn-outline-secondary mr-1">Sort</button>
+						<button type="button" class="btn btn-outline-secondary">Show All</button>
+					</div>
+				</div>
+			    <div class="divider mb-4"></div>
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="row">
+							<div class="col-2"> 
+							  <div class="form-check">
+								<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+							  </div>
+							</div>
+							<div class="col-10">
+							  <p>Promotion 1</p>
+							  <p>Unique name code</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+					  <p>Discount of 10% with Inflated Crossout 5% and Free Kids</p>
+					  <a class="btn btn-link btn-expand collapsed pr-1" data-toggle="collapse" href="#collapseExample1"  role="button"  aria-expanded="false" aria-controls="collapseExample">
+						<span class="closed dropdown-toggle">5 rates</span></a>
+						<div class="collapse" id="collapseExample1">
+							<div class="" id="collapseExample1">
+							Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2">
+					  <p>Booking window</p>
+					  <div class="row">
+						<div class="col-5">Start</div>
+						<div class="col-78">Feb 1, 2018</div>
+					  </div>
+					  <div class="row">
+						<div class="col-5">End</div>
+						<div class="col-78">May 1, 2018</div>
+					  </div>
+					</div>
+					<div class="col-lg-2">
+					  <p>Travel window</p>
+					  <div class="row">
+						<div class="col-5">Start</div>
+						<div class="col-78">Feb 1, 2018</div>
+					  </div>
+					  <div class="row">
+						<div class="col-5">End</div>
+						<div class="col-78">May 1, 2018</div>
+					  </div>
+					</div>
+					<div class="col-lg-1">Bookings</div>
+					<div class="col-lg-1"><div class="bm-icon-sign-identical mr-2"></div></div>
+				</div>
+				<div class="divider my-3"></div>
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="row">
+							<div class="col-2"> 
+							  <div class="form-check">
+								<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+							  </div>
+							</div>
+							<div class="col-10">
+							  <p>Promotion 2</p>
+							  <p>Unique name code</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+					  <p>Discount of 10% with Inflated Crossout 5% and Free Kids</p>
+					  <p><a class="btn btn-link btn-expand collapsed pr-1" data-toggle="collapse" href="#collapseExample2"  role="button"  aria-expanded="false" aria-controls="collapseExample">
+						<span class="closed dropdown-toggle">5 rates</span></a>
+						<div class="collapse" id="collapseExample2">
+							<div class="" id="collapseExample2">
+							Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2">
+					  <p>Booking window</p>
+					  <div class="row">
+						<div class="col-5">Start</div>
+						<div class="col-78">Feb 1, 2018</div>
+					  </div>
+					  <div class="row">
+						<div class="col-5">End</div>
+						<div class="col-78">May 1, 2018</div>
+					  </div>
+					</div>
+					<div class="col-lg-2">
+					  <p>Travel window</p>
+					  <div class="row">
+						<div class="col-5">Start</div>
+						<div class="col-78">Feb 1, 2018</div>
+					  </div>
+					  <div class="row">
+						<div class="col-5">End</div>
+						<div class="col-78">May 1, 2018</div>
+					  </div>
+					</div>
+					<div class="col-lg-1">Bookings</div>
+					<div class="col-lg-1"><div class="bm-icon-sign-identical mr-2"></div></div>
+				</div>				
+				<div class="divider my-3"></div>
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="row">
+							<div class="col-2"> 
+							  <div class="form-check">
+								<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+							  </div>
+							</div>
+							<div class="col-10">
+							  <p>Promotion 3</p>
+							  <p>Unique name code</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+					  <p>Discount of 10% with Inflated Crossout 5% and Free Kids</p>
+					  <a class="btn btn-link btn-expand collapsed pr-1" data-toggle="collapse" href="#collapseExample3"  role="button"  aria-expanded="false" aria-controls="collapseExample">
+						<span class="closed dropdown-toggle">5 rates</span></a>
+						<div class="collapse" id="collapseExample3">
+							<div class="" id="collapseExample3">
+							Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2">
+					  <p>Booking window</p>
+					  <div class="row">
+						<div class="col-5">Start</div>
+						<div class="col-78">Feb 1, 2018</div>
+					  </div>
+					  <div class="row">
+						<div class="col-5">End</div>
+						<div class="col-78">May 1, 2018</div>
+					  </div>
+					</div>
+					<div class="col-lg-2">
+					  <p>Travel window</p>
+					  <div class="row">
+						<div class="col-5">Start</div>
+						<div class="col-78">Feb 1, 2018</div>
+					  </div>
+					  <div class="row">
+						<div class="col-5">End</div>
+						<div class="col-78">May 1, 2018</div>
+					  </div>
+					</div>
+					<div class="col-lg-1">Bookings</div>
+					<div class="col-lg-1"><div class="bm-icon-sign-identical mr-2"></div></div>
+				</div>
+			  
+			  
+			  </div>
+	  	      <div class="tab-pane fade" id="rates" role="tabpanel" aria-labelledby="nav-rates-tab">Rates with Promotions</div>
+		      <div class="tab-pane fade" id="promotions" role="tabpanel" aria-labelledby="nav-promotions-tab">All Promotions</div>
+		    </div>
+		  </div>
+		</div>
+	  </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	
+
+
+
+	
+	
+
+
+	
+  </body>
+</html>
