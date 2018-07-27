@@ -6,13 +6,13 @@
 // Default is system fonts, alternative is traditional web
 // System fonts allows greater flexibility with font weight
 
-// $font-family-base: $font-family-sans-serif-traditional !default; 
- $font-family-base: $font-family-sans-serif !default; 
+// $font-family-base: $font-family-sans-serif-traditional !default;
+ $font-family-base: $font-family-sans-serif !default;
 
 //Import of material design palette
  @import "colors-material";
- 
- 
+
+
 //Import of custom variables
 
 @import "../../node_modules/bootstrap/scss/functions";
@@ -25,14 +25,14 @@
 @import "../../fonts/icons";
 
 
- 
+
 
 // ----------------------------------
 // Dividers
 // ----------------------------------
- 
+
 .divider {
-  border-top: 2px solid rgba($black, .12); 
+  border-top: 2px solid rgba($black, .12);
 }
 
 .divider-vertical {
@@ -43,7 +43,7 @@
 .divider-flush {            // Goes to the card edge
   margin-right: -20px;
   margin-left: -20px;
-  border-top: 1px solid rgba($black, .24); 
+  border-top: 1px solid rgba($black, .24);
 }
 
 // ----------------------------------
@@ -64,7 +64,7 @@ a.inline-action-with-icon {
      .inline-action {
      text-decoration: underline;
 	 }
-   }  
+   }
 }
 
 // Icon alone
@@ -109,8 +109,8 @@ a.inline-action-with-icon {
     opacity: 1;
     color: rgba($black, 0.38);
 	background-color: rgba($black, 0.04);
-	border-color: rgba($black, 0.01); 
-  } 
+	border-color: rgba($black, 0.01);
+  }
 }
 
 
@@ -165,7 +165,7 @@ input, textarea {
 .custom-control-input {
   &:disabled {
     ~ .custom-control-label {
-      
+
       &::before {
         border-color: rgba(0,0,0,.20);
       }
@@ -173,7 +173,7 @@ input, textarea {
   }
 
 }
-  
+
 .custom-checkbox {
   .custom-control-label::before {
     border: 2px solid rgba(0,0,0,.38);
@@ -183,7 +183,7 @@ input, textarea {
       border: theme-color("primary");
     }
   }
-  @extend .mb-0; 
+  @extend .mb-0;
 }
 
 .custom-radio {
@@ -196,7 +196,7 @@ input, textarea {
 	  background-color: transparent;
     }
   }
-  @extend .mb-0;   
+  @extend .mb-0;
 }
 
 
@@ -244,7 +244,7 @@ input, textarea {
 }
 
 .label-helper-icon {
-  color: rgba(0,0,0,0.54);
+  color: $palette-ui-help;
   padding-left: 8px;
   .material-icons {
     vertical-align: text-bottom;
@@ -281,7 +281,7 @@ input, textarea {
 //  font-size: 1.5rem;
   font-weight: 400;
   font-size: 34px;
-  color: $palette-header-1;  
+  color: $palette-header-1;
 }
 
 // Section title
@@ -291,7 +291,7 @@ input, textarea {
   font-size: 14px;
   text-transform: uppercase;
   color: $palette-header-2;
-  margin-bottom: 16px;  
+  margin-bottom: 16px;
 }
 
 // List title
@@ -349,7 +349,7 @@ a {
   background-color: $palette-app-header;
   z-index: 1040;
 //  @include box-shadow(0 .3rem .5rem rgba($black, .175) );    dark header
-  @include box-shadow(0 .3rem .5rem rgba($black, .08) );  
+  @include box-shadow(0 .3rem .5rem rgba($black, .08) );
   a.nav-link {
     color: $palette-app-header-text;
 	font-weight: $header-font-weight;
@@ -358,8 +358,8 @@ a {
 	  color: rgba(0,0,0,0.6);
 	}
   }
-  
-  
+
+
   .nav-link:hover {
   background-color: transparent;
   border-bottom: 0;
@@ -395,7 +395,7 @@ a {
 	padding-bottom: 8px;
   }
   .check-all {
-    padding-bottom: 0;  
+    padding-bottom: 0;
   }
 }
 
@@ -449,7 +449,7 @@ a {
   border-bottom: 1px solid transparent;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
-  font-weight: $font-weight-semi-bold;  
+  font-weight: $font-weight-semi-bold;
 }
 
 .nav-tabs .nav-link:hover {
@@ -512,13 +512,13 @@ a {
 .alert-warning {
   background-color: $palette-bg-yellow;
   border-color: $palette-bg-yellow;
-  color: $body-color;  
+  color: $body-color;
 }
 
 .alert-info {
   background-color: $palette-bg-blue;
   border-color: $palette-bg-blue;
-  color: $body-color;  
+  color: $body-color;
 }
 
 

@@ -34,6 +34,7 @@ $palette-primary:                       #3479E0;
 $palette-ui-red:                        #F42F18;
 $palette-ui-yellow:                     #FFC900;
 $palette-ui-green:                      #00A851;
+$palette-ui-help:                       #384C6B;
 
 $palette-bg-blue:                       #D0DFED;
 $palette-bg-red:                        #FFC9CC;
@@ -43,9 +44,6 @@ $palette-bg-yellow:                     #FFEBAF;
 $palette-app-header:                    #f5f5f5;
 $palette-app-background:                #eee;
 $palette-link-blue:                     #2C48AE;
-
-$palette-header-1:                      rgba(0,0,0,0.7);
-$palette-header-2:                      rgba(0,0,0,0.6);
 
 $palette-kpi-1:                         #296EB4;
 $palette-kpi-2:                         #2A9D55;
@@ -66,6 +64,9 @@ $palette-chart-5:                       #FF3F90;
 $palette-chart-5-1:                     #FF81B6;
 $palette-chart-6:                       #FD8000;
 $palette-chart-6-1:                     #FFC07F;
+
+$palette-header-1:                      $palette-kpi-1;
+$palette-header-2:                      darken($palette-kpi-1, 5%);
 
 
 //------------------------------------------------------------------
